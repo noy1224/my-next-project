@@ -1,16 +1,7 @@
 import Image from "next/image"
 
 import styles from "./index.module.css"
-
-type News = {
- id: string;
- title: string
- category:{
-  name:string;
- };
- publishedAt: string;
- createdAt:string;
-};
+import { News } from "@/app/_libs/microcms"
 
 type Props = {
     news: News[];
@@ -24,17 +15,34 @@ type Props = {
     <ul>
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
-          <li key={article.id} className={styles.list}>
-
+           <div className={styles.listItem}>
               <Image
-                src="/no/image.png"
-                alt="No image"
                 className={styles.image}
+                src="/noimage.png"
+                alt="No Image"
                 width={1200}
                 height={630}
               />
-              
+              <dl className={styles.content}>
+                <dt className={styles.title}>{article.title}</dt>
+                <dd className={styles.meta}>
+                  <span className={styles.tag}>{article.category.name}
+                  </span>
+                  <span className={styles.date}>
+                    <Image
+                      src="/calendar.svg"
+                      alt=""
+                      width={16}
+                      height={16}
+                      priority
+                    />
+                    {article.publishedAt}
+                  </span>
+              </dd>
+            </dl>
             </div>  
             </li>
           ))}
         </ul>
+    );
+  }
