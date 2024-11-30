@@ -32,14 +32,6 @@ var(--boder-radius);
     gap: 16px;
 }
 
-.data {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0.8rem 0;
-    font-size: 1rem;
-}
-
 @media (max-width: 640px) {
     .link {
         display: block;

@@ -48,17 +48,6 @@
 }
 
 .newsLink {
-  position: acsolute;
-  right: -40px;
-  bottom: -40px;
-} 
-
-@media (max-width: 1000px)   {
- .news {
-   width: calc(100% - 160px);
- }
-}
-.newsLink {
   position: absolute;
   right: -40px;
   bottom: -40px;
