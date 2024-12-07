@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import styles from "./index.module.css"
 import Category from "../Category";
@@ -17,7 +18,7 @@ type Props = {
     <ul>
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
-           <div className={styles.listItem}>
+          <Link href={`/news/${article.id}`} className={styles.link}>
               <Image
                 className={styles.image}
                 src="/noimage.png"
@@ -33,7 +34,7 @@ type Props = {
                 article.createdAt} />
               </dd>
             </dl>
-            </div>  
+            </Link>  
             </li>
           ))}
         </ul>
