@@ -1,4 +1,4 @@
-import Sheet from "@/app/_components/Sheet";
+import Sheet from "@/app/_components/sheet";
 import Hero from '@/app/_components/Hero';
 
 
