@@ -75,5 +75,18 @@ export type Category = {
         });
         return detailData;
       };
+
+      export const getCategoryDetail  = async (
+        contentId: string,
+        queries?: MicroCMSQueries
+      ) => {
+        const detailData = await client.getListDetail<Category>({
+          endpoint: 'Categoory',
+          contentId,
+          queries,
+        });
+        return detailData;
+      };
+
       
       
