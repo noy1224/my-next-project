@@ -81,7 +81,7 @@ export type Category = {
         queries?: MicroCMSQueries
       ) => {
         const detailData = await client.getListDetail<Category>({
-          endpoint: 'Categoory',
+          endpoint: 'categoory',
           contentId,
           queries,
         });
